@@ -26,14 +26,12 @@ const App = () => {
   return (
     <div className="relative min-h-screen bg-[#020617] text-slate-300 selection:bg-emerald-500/30 overflow-x-hidden">
 
-      {/* Background Mesh & Noise */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-900 rounded-full blur-[120px]" />
         <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-emerald-800 rounded-full blur-[120px]" />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 contrast-150 brightness-100"></div>
       </div>
 
-      {/* Spotlight Layer */}
       <div
         className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-500 hidden lg:block"
         style={{
@@ -41,7 +39,6 @@ const App = () => {
         }}
       />
 
-      {/* MOBILE HEADER */}
       <div className="lg:hidden fixed top-0 left-0 w-full p-6 bg-[#020617]/90 backdrop-blur-md z-[60] flex justify-between items-center border-b border-white/5">
         <div className="flex items-center gap-2">
           <div className="bg-emerald-500 p-1.5 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.4)]">
@@ -54,7 +51,6 @@ const App = () => {
         </button>
       </div>
 
-      {/* SIDEBAR */}
       <aside className={`
         fixed z-[55] transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1)
         lg:left-8 lg:top-8 lg:bottom-8 lg:w-72 lg:bg-white/[0.01] lg:border lg:border-white/10 lg:backdrop-blur-3xl lg:rounded-[3rem] lg:flex lg:shadow-2xl
@@ -79,6 +75,7 @@ const App = () => {
             {[
               { name: 'Identity', id: 'about', icon: <User size={18} /> },
               { name: 'Showcase', id: 'projects', icon: <Code size={18} /> },
+              { name: 'certificates', id: 'projects', icon: <Code size={18} /> },
               { name: 'Get in Touch', id: 'contact', icon: <Send size={18} /> }
             ].map((item) => (
               <button
@@ -106,10 +103,8 @@ const App = () => {
         </div>
       </aside>
 
-      {/* MAIN CONTENT */}
       <main className="lg:ml-[22rem] px-6 md:px-16 lg:pr-32 pt-40 lg:pt-32 space-y-40 lg:space-y-64 relative z-10">
 
-        {/* ABOUT SECTION */}
         <section id="about" className="scroll-mt-32 max-w-6xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-10 shadow-sm">
             <Sparkles size={12} className="animate-pulse" /> Verified Web Developer
@@ -147,7 +142,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* CV SECTION */}
             <div className="lg:col-span-5 lg:mt-24">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-[2.5rem] blur opacity-10 group-hover:opacity-25 transition duration-1000"></div>
@@ -182,7 +176,6 @@ const App = () => {
             </div>
           </div>
         </section>
-        {/* PROJECTS SECTION */}
         <section id="projects" className="scroll-mt-32">
           <div className="flex items-center justify-between mb-16">
             <div className="space-y-2">
@@ -194,7 +187,6 @@ const App = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* PROJECT 1: REACT */}
             <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-white/[0.01] p-1 transition-all duration-500 hover:border-emerald-500/30 hover:-translate-y-2">
               <div className="bg-slate-950/50 backdrop-blur-sm rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
                 <div>
@@ -215,7 +207,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* PROJECT 2: PYTHON */}
             <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-white/[0.01] p-1 transition-all duration-500 hover:border-emerald-500/30 hover:-translate-y-2">
               <div className="bg-slate-950/50 backdrop-blur-sm rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
                 <div>
@@ -236,7 +227,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* PROJECT 3: LARAVEL */}
             <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-white/[0.01] p-1 transition-all duration-500 hover:border-emerald-500/30 hover:-translate-y-2">
               <div className="bg-slate-950/50 backdrop-blur-sm rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
                 <div>
@@ -258,7 +248,6 @@ const App = () => {
             </div>
           </div>
 
-          {/* INTEREST/STATUS CARD (The Green One) */}
           <div className="mt-12 group relative overflow-hidden rounded-[3rem] bg-gradient-to-r from-emerald-600 to-teal-800 p-[1px]">
             <div className="bg-[#020617]/90 rounded-[2.9rem] p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 overflow-hidden relative">
               <div className="absolute -right-10 top-0 opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-1000">
@@ -288,7 +277,6 @@ const App = () => {
             </div>
           </div>
         </section>
-        {/* CERTIFICATES SECTION */}
         <section id="certificates" className="scroll-mt-32">
           <div className="flex items-center gap-4 mb-16">
             <div className="p-3 bg-emerald-500/10 rounded-2xl text-emerald-400">
@@ -311,7 +299,6 @@ const App = () => {
                     <p className="text-slate-500 text-sm italic">{cert.issuer}</p>
                   </div>
 
-                  {/* Button to view Image */}
                   <div className="mt-8">
                     <button
                       onClick={() => alert("Këtu do të hapet imazhi i çertifikatës suaj. (Modal Integration)")}
@@ -326,12 +313,10 @@ const App = () => {
             ))}
           </div>
 
-          {/* Note for Security */}
           <p className="text-center text-slate-600 text-[10px] mt-8 uppercase tracking-[0.2em]">
             Certificates are protected. View-only mode enabled.
           </p>
         </section>
-        {/* CONTACT SECTION */}
         <section id="contact" className="scroll-mt-32 flex flex-col items-center text-center">
           <div className="mb-12 relative">
             <div className="absolute -inset-10 bg-emerald-500 rounded-full blur-[100px] opacity-10"></div>
@@ -361,7 +346,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* FOOTER SECTION - E vendosur saktësisht tek vija e kuqe */}
        <footer className="w-full pt-20 pb-12 mt-20 border-t border-white/3 flex justify-end items-center">
             <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
@@ -371,7 +355,7 @@ const App = () => {
             </div>
         </footer>
 
-      </main> {/* Mbyllja e Main që ka ml-96 */}
+      </main> 
     </div>
   );
 };
