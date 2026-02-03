@@ -105,7 +105,7 @@ const App = () => {
 
       <main className="lg:ml-[22rem] px-6 md:px-16 lg:pr-32 pt-40 lg:pt-32 space-y-40 lg:space-y-64 relative z-10">
 
-        <section id="about" className="scroll-mt-32 max-w-6xl">
+        <section id="about" className="scroll-mt-32">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-10 shadow-sm">
             <Sparkles size={12} className="animate-pulse" /> Verified Web Developer
           </div>
