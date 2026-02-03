@@ -75,7 +75,7 @@ const App = () => {
             {[
               { name: 'Identity', id: 'about', icon: <User size={18} /> },
               { name: 'Showcase', id: 'projects', icon: <Code size={18} /> },
-              { name: 'certificates', id: 'projects', icon: <Code size={18} /> },
+              { name: 'certificates', id: 'certificates', icon: <Code size={18} /> },
               { name: 'Get in Touch', id: 'contact', icon: <Send size={18} /> }
             ].map((item) => (
               <button
@@ -325,8 +325,7 @@ const App = () => {
 
           <div className="max-w-2xl space-y-8 mb-16">
             <p className="text-slate-400 text-xl lg:text-2xl leading-relaxed font-light italic">
-              "Whether you have a question, a project idea, or just want to say hi—my inbox is always open."
-            </p>
+"Whether you have a question, a project idea, or want to explore a potential collaboration—my inbox is always open."            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 mb-20 p-4 bg-white/[0.02] border border-white/10 backdrop-blur-xl rounded-[2.5rem] px-10 shadow-2xl">
